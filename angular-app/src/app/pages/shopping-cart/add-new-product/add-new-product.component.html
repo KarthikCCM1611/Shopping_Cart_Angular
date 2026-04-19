@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Add New Product</h2>
+    <div class="container d-flex justify-content-center align-items-center vh-60">
+        <form class='w-75 border p-4 rounded' #formRef="ngForm">
+            <div class="mb-3 d-flex row">
+                <label name="name" class="col-md-3 form-label">Product Name: </label>
+                <input type="text" class="col-md-9 form-control" id="name" name="name" [(ngModel)]="product.name"
+                    required #nameRef/>
+            </div>
+            <div class="mb-3 d-flex row">
+                <label name="image" class="form-label col-md-3">Product Image: </label>
+                <input type="file" accept='.png, .jpg, .jpeg' class="form-control col-md-9" id="image" name="image"
+                    [(ngModel)]="product.image" #imageRef required />
+            </div>
+            <div class="mb-3 d-flex row">
+                <label name="price" class="form-label col-md-3">Price</label>
+                <input type="number" class="form-control col-md-9" id="price" name="price" 
+                    [(ngModel)]="product.price" min="1" required #priceRef />
+            </div>
+            <div class='d-flex justify-content-center row'>
+                <a (click)= "goToHome()" class="btn btn-primary col-md-3 m-1">Back to Home</a>
+                <button type="button" (click)="createProduct(imageRef)" [disabled]="formRef.invalid" class="btn btn-success col-md-3 m-1">Create
+                    Product</button>
+            </div>
+        </form>
+    </div>
+</div>

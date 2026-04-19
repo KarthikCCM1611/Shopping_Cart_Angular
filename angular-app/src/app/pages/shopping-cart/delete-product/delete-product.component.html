@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <h2>Delete Product</h2>
+    @if(isProductExists) {
+    <div class='row border m-3 p-3'>
+        <div class='col-md-8'>
+            <div class="container d-flex justify-content-center align-items-center vh-60">
+                <form class='w-75 p-4 rounded'>
+                    <input name="id" [(ngModel)]="product.id" hidden />
+                    <div class="mb-3 d-flex row">
+                        <label for="name" class="col-md-3 form-label">Product Name: </label>
+                        <input type="text" class="col-md-9 form-control" id="name" name="name" [(ngModel)]="product.name" 
+                            disabled />
+                    </div>
+                    <div class="mb-3 d-flex row">
+                        <label for="price" class="form-label col-md-3">Price</label>
+                        <input type="number" class="form-control col-md-9" id="price" name="price" [(ngModel)]="product.price"
+                            disabled />
+                    </div>
+                    <div class='d-flex justify-content-center row'>
+                        <button routerLink="/shopping-cart" class="btn btn-primary col-md-3 m-1">Back to Cart</button>
+                        <button type="button" (click)="deleteProduct()" class="btn btn-success col-md-3 m-1">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class='col-md-3'>
+            <img src={{product.image}} alt={{product.name}} style="height: 250px; width:250px" />
+        </div>
+    </div>
+    }
+    @else {
+    <p class='text-center p-3 bg-dark text-white font-weight-bold'> Product Id = {{deleteProductId}} is not found</p>
+    }
+</div>

@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <h2 class='text-uppercase text-center pt-2'>Cart Items</h2>
+    <div class="row m-3">
+        @for(product of cartProducts; track $index) {
+        <div class="card border-primary m-2 cardHeight col-md-3">
+            <h4 class='card-title text-center'>{{product.name}}</h4>
+            <img class='card-img-top' src={{product.image}} alt={{product.name}} style="height: 400px" />
+            <div class='card-text text-center'>
+                <p> <b>Price: </b>{{product.price}} </p>
+            </div>
+            <div class='card-footer'>
+                <button (click)="deleteCartProduct(product.id)" class='btn btn-warning w-100 p-2'>Remove Item</button>
+            </div>
+        </div>
+        }
+    </div>
+    @if(dataNotAvailable) {
+    <div class="w-100 h-100">
+        <p class='text-center bg-dark text-white p-3'>Cart is Empty</p>
+    </div>
+    }
+    <div class='container text-center'>
+        <button routerLink="/shopping-cart" class='btn btn-dark'>
+            Back to Shopping
+        </button>
+    </div>
+</div>

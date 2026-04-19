@@ -1,0 +1,14 @@
+[
+  {
+    "Id": "c24b4e3f-03ac-41d1-97f6-1fbdea2a35c0",
+    "Name": "test",
+    "Image": "D:\\New folder\\Test\\WebAPI\\WebAPI\\data/shopping-cart/images/6c70185e-d627-49cb-85ae-5f09aa84c8c3.png",
+    "Price": 20
+  },
+  {
+    "Id": "5294bc11-448c-4723-a5d4-58dfe67eb89d",
+    "Name": "Test3",
+    "Image": "D:\\New folder\\Test\\WebAPI\\WebAPI\\data/shopping-cart/images/5294bc11-448c-4723-a5d4-58dfe67eb89d.png",
+    "Price": 500
+  }
+]

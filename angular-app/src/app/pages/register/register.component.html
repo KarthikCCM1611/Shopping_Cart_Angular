@@ -1,0 +1,48 @@
+<div class="container mt-5 col-md-6">
+    <h2 class="text-center mb-4">Register</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label>Username</label>
+            <input class="form-control" formControlName="userName" />
+            <div class="text-danger"
+                *ngIf="registerForm.get('userName')?.touched && registerForm.get('userName')?.invalid">
+                Username is required
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label>Password</label>
+            <input type="password" class="form-control" formControlName="password" />
+            <div class="text-danger"
+                *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid">
+                Password is required (min 6 chars)
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control" formControlName="email" />
+            <div class="text-danger" *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid">
+                Valid email is required
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label>Phone</label>
+            <input type="text" class="form-control" formControlName="phone" />
+            <div class="text-danger" *ngIf="registerForm.get('phone')?.touched && registerForm.get('phone')?.invalid">
+                Valid 10-digit phone number required
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label>City</label>
+            <input type="text" class="form-control" formControlName="city" />
+            <div class="text-danger" *ngIf="registerForm.get('city')?.touched && registerForm.get('city')?.invalid">
+                City is required
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100" [disabled]="registerForm.invalid">Register</button>
+    </form>
+</div>

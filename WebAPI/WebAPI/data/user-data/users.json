@@ -1,0 +1,26 @@
+[
+  {
+    "id": "98d4bdbf-9c81-4bee-b201-7d253ebc2012",
+    "userName": "Karthik",
+    "password": "karthik",
+    "email": "karthik@gmail.com",
+    "phone": "1234567890",
+    "city": "Chennai"
+  },
+  {
+    "id": "565b9022-f084-493d-a6de-483c698c4202",
+    "userName": "admin",
+    "password": "admin123",
+    "email": "admin@gmail.com",
+    "phone": "0147852369",
+    "city": "Inida"
+  },
+  {
+    "id": "0d873a32-1891-4d8a-b18f-f862245e5990",
+    "userName": "arun",
+    "password": "arun123",
+    "email": "arun@gmail.com",
+    "phone": "1234567890",
+    "city": "Mumbai"
+  }
+]

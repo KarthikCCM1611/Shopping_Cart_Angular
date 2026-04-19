@@ -1,0 +1,58 @@
+<div class="container">
+  <h2>My To-Dos</h2>
+
+  <!-- <div class="'row col-md-12'">
+    <input [(ngModel)]="newTitle" [ngClass]="'form-control col-md-7'" placeholder="New task" />
+    <button [ngClass]="'btn btn-primary col-md-3'" (click)="add()">Add</button>
+</div> 
+
+<ul>
+  <li *ngFor="let t of todos">
+    <input type="checkbox" [ngClass]="'form-control'"
+           [checked]="t.isDone"
+           (change)="toggle(t)" />
+    <span [style.text-decoration]="t.isDone ? 'line-through' : ''">
+      {{ t.title }}
+    </span>
+    <button (click)="remove(t.id)">❌</button>
+  </li>
+</ul>
+-->
+  <div class="row mb-3">
+    <div class="col-md-5">
+      <input [(ngModel)]="newTitle" class="form-control" placeholder="New task" />
+    </div>
+    <div class="col-md-2">
+      <button [ngClass]="'btn btn-primary w-100'" [disabled]="newTitle === '' ? true : false"
+        (click)="add()">Add</button>
+    </div>
+  </div>
+  <ul class="list-unstyled">
+    <li *ngFor="let t of todos" [ngClass]="'row mb-3'">
+      <div class="col-md-5">
+        <input type="checkbox" [ngClass]="'form-check-input me-2'" [checked]="t.isDone" (change)="toggle(t)" />
+        <label [ngClass]="'form-check-label flex-grow-1'" [style.text-decoration]="t.isDone ? 'line-through' : ''">
+          {{ t.title }}
+        </label>
+      </div>
+      <div [ngClass]="'col-md-3'">
+        <button [ngClass]="'btn btn-sm btn-danger ms-2'" (click)="remove(t.id)">❌</button>
+      </div>
+    </li>
+  </ul>
+
+  <!-- <ul class="list-unstyled">
+  <li *ngFor="let t of todos" class="d-flex align-items-center justify-content-between mb-2">
+    <div class="form-check d-flex align-items-center flex-grow-1">
+      <input type="checkbox" class="form-check-input me-2"
+             [checked]="t.isDone"
+             (change)="toggle(t)" />
+      <label class="form-check-label flex-grow-1"
+             [style.text-decoration]="t.isDone ? 'line-through' : ''">
+        {{ t.title }}
+      </label>
+    </div>
+    <button class="btn btn-sm btn-danger ms-2" (click)="remove(t.id)">❌</button>
+  </li>
+</ul> -->
+</div>
